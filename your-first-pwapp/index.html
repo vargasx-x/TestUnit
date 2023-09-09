@@ -56,7 +56,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Paso 1: Descargar Extension Test Runner" duration="2">
+      <google-codelab-step label="Descargar Extension Test Runner" duration="2">
         <p>Debes ir a la parte izquierda de Visual Studio, en el símbolo de  extensiones::</p>
 <p class="image-container"><img style="width: 53.00px" src="img\\6392bbddb4bd97ae.png"></p>
 <p>Luego vas al buscador y escribes  &#34;Test Runner&#34; y seleccionas esta extensión:</p>
@@ -65,6 +65,97 @@
 <p class="image-container"><img style="width: 601.70px" src="img\\5506bc955f14abea.png"></p>
 <aside class="special"><p><strong>Nota:</strong> Recuerda tener conexión a internet para realizar este proceso.</p>
 </aside>
+<p>Teniendo ya esto, continuamos con el código en Java</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Prueba Unitaria &#34;assertTimeout&#34;" duration="0">
+        <p>La función <code>assertTimeout</code>  en Java se utiliza para verificar que una operación se complete dentro de un período de tiempo especificado. Esta función es especialmente útil en pruebas unitarias (unit testing) cuando deseas asegurarte de que una parte de tu código se ejecute en un tiempo razonable y no tome demasiado tiempo, lo que podría indicar un problema o una degradación del rendimiento en tu aplicación.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Paso 1: Creamos una clase" duration="0">
+        <p>Creamos los métodos, los atributos, los Getters y Setters en el paquete Control</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\a3e5d585b33128f7.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Paso 2: Creamos una clase donde llevaremos el Test" duration="0">
+        <p class="image-container"><img style="width: 176.00px" src="img\\956371309cccc1de.png"></p>
+<p>Esta será creada en el paquete &#34;Test&#34;</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Paso 3: Importamos las clases necesarias" duration="0">
+        <p class="image-container"><img style="width: 592.00px" src="img\\6d719846382867d4.png"></p>
+<p><strong>(1). </strong></p>
+<p><strong><code>import static org.junit.jupiter.api.Assertions.assertTimeout;</code></strong></p>
+<p>Esta línea importa el método <code>assertTimeout</code> de la clase de <code>Assertions</code> de JUnit.</p>
+<p><code>assertTimeout</code> se utiliza para verificar si un bloque de código se ejecuta dentro de un límite de tiempo especificado.</p>
+<p><strong>(2). </strong><code>import java.time.Duration;</code></p>
+<p>Esta linea importa la clase <strong><code>Duration</code></strong> del paquete <strong><code>java.time</code></strong>. <strong><code>Duration</code></strong> se utiliza para representar una cantidad de tiempo, como segundo, milisegundos, etc,</p>
+<p><strong>(3). </strong></p>
+<p><strong><code>import org.junit.jupiter.api.Test;</code></strong></p>
+<p>Esta línea importa la anotación <strong><code>Test</code></strong> de JUnit. <strong><code>@Test</code></strong> se utiliza para marcar un método como un método de prueba.</p>
+<p><strong>(4).</strong></p>
+<p><strong><code>import control.AgregarIngredientes;</code></strong></p>
+<p>Esta linea importa la clase <code>AgregarIngredientes</code> del paquete <code>control</code>. Esto asume que tendremos una clase llamada <code>AgregarIngredientes</code> en el proyecto.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Paso 4: Creamos la prueba" duration="0">
+        <ol type="1" start="1">
+<li>Crearemos la clase <code>AgregarIngredientes1</code>, </li>
+</ol>
+<p class="image-container"><img style="width: 325.00px" src="img\\5aea9c60805edb8c.png"></p>
+<ol type="1" start="2">
+<li>Luego de ello anotaremos el método de prueba con <strong><code>@Test.</code></strong></li>
+</ol>
+<p class="image-container"><img style="width: 319.00px" src="img\\8037ef396ceaf140.png"></p>
+<ol type="1" start="3">
+<li>Crearemos una instancia de la clase <code>AgregarIngredientes</code>.</li>
+</ol>
+<p class="image-container"><img style="width: 601.70px" src="img\\8326be3d3fc77ab8.png"></p>
+<ol type="1" start="4">
+<li>Utilizaremos <code>assertTimeout</code>  para establecer un limite de tiempo</li>
+</ol>
+<p class="image-container"><img style="width: 467.00px" src="img\\899836d4f130fecc.png"></p>
+<ol type="1" start="5">
+<li>Agregaremos el código de prueba dentro del bloque lambda</li>
+</ol>
+<p class="image-container"><img style="width: 591.00px" src="img\\3aa4dcadfb8e568b.png"></p>
+<ol type="1" start="6">
+<li>Repetimos el proceso según los métodos que tengamos, en nuestro ejemplo tenemos 3 métodos en la clase <code>AgregarIngredientes</code>, por consiguiente tendremos 3 sub-pruebas dentro de una sola prueba.</li>
+</ol>
+<p><strong>RESULTADO.</strong></p>
+<p>El codigo quedaria asi:</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\e1cf569c743cc394.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Paso 5: Ejecutamos la prueba" duration="0">
+        <p>Nos vamos a dirigir al panel del lado izquierdo al icono de &#34;Pruebas&#34;.</p>
+<p class="image-container"><img style="width: 197.00px" src="img\\23c5b70fd516da27.png"></p>
+<p>Saldra esto:</p>
+<p class="image-container"><img style="width: 346.00px" src="img\\18422c1728e9e552.png"></p>
+<p>Le daremos a &#34;Enable Java Tests&#34;</p>
+<p class="image-container"><img style="width: 598.00px" src="img\\18929be52bf10d3f.png"></p>
+<p>Le daremos &#34;JUnit Jupiter&#34;</p>
+<p>Según las pruebas que tengamos en el proyecto nos saldrán aca.</p>
+<p class="image-container"><img style="width: 309.00px" src="img\\4840cffb0ed01a79.png"></p>
+<p>Como habíamos dicho antes, eran tres sub-pruebas en una sola prueba.<br><img style="width: 305.00px" src="img\\bf9f2b7b1076418d.png"></p>
+<p>Podremos ejecutar una por una o la prueba principal<br></p>
+<p>Al ejecutar la prueba principal, si la prueba sale correcta, nos saldra asi:</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\42b6cef6c59f44c2.png"></p>
+<p>Si en la parte derecha nos aparece este icono <img style="width: 29.33px" src="img\\b916902c2eb27f06.png"> esto quiere decir que la prueba fue exitosa, de lo contrario saldrá este icono <img style="width: 40.03px" src="img\\9ea5766ae9c36e8e.png"> quiere decir que la prueba se demoró mas de lo esperado y excedió el tiempo límite que se colocó.<br><br>Un ejemplo seria este:</p>
+<p class="image-container"><img style="width: 601.70px" src="img\\d5b476413ee62d9c.png"></p>
+<p>Al ejecutarse la prueba, tenemos un tiempo límite de 5 milésimas de segundo, y el proceso se demoró más de ese tiempo, por eso sale error.</p>
 
 
       </google-codelab-step>
