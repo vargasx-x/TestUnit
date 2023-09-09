@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Tutorial Java Unit</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-52746336-1"
+                  codelab-ga4id=""
+                  id="your-first-pwapp"
+                  title="Tutorial Java Unit"
+                  environment="web"
+                  feedback-link="https://github.com/googlecodelabs/your-first-pwapp/issues">
+    
+      <google-codelab-step label="Introducción" duration="1">
+        <p class="image-container"><img style="width: 376.50px" src="img\\c32fe3cd0fa5c4c1.png"></p>
+<p>¡Bienvenidos a este tutorial sobre cómo utilizar JUnit y las afirmaciones de Java en CodeLab!</p>
+<p>JUnit es el marco de pruebas unitarias de Java más popular y se utiliza para escribir y ejecutar pruebas automatizadas repetibles. Las pruebas unitarias son una forma de prueba de caja blanca en la que los casos de prueba se basan en la estructura interna del código y su propósito es examinar los componentes individuales o piezas de métodos/clases para verificar la funcionalidad.</p>
+<p>En este tutorial, aprenderemos:</p>
+<ul>
+<li>Cómo configurar JUnit en Visual Studio Code..</li>
+<li>Cómo escribir pruebas unitarias utilizando las diferentes anotaciones y algunos tipos de assertions que ofrece JUnit.</li>
+</ul>
+<p>Al final de este tutorial, serás capaz de escribir y ejecutar pruebas unitarias con JUnit y assertions de Java. ¡Comencemos!&#34;</p>
+<h3 is-upgraded><strong>¿Qué es JUnit?</strong></h3>
+<p>JUnit es el marco de pruebas unitarias de Java más popular. Un marco de código abierto, se utiliza para escribir y ejecutar pruebas automatizadas repetibles.</p>
+<p>Como con cualquier otra cosa, el marco de prueba JUnit ha evolucionado con el tiempo. JUnit 4.0 se lanzó en 2006 y 5.0 se lanzó en 2017. Al momento de escribir este artículo, la última versión es 5.9.1. JUnit 5.x ha abordado muchas de las limitaciones anteriores de JUnit y se ha convertido en el marco de pruebas de unidades de Java más sólido.</p>
+<h3 is-upgraded><strong>¿Por qué es importante para las pruebas unitarias en Java?</strong></h3>
+<p>JUnit es importante para las pruebas unitarias en Java porque facilita la escritura y ejecución de pruebas automatizadas repetibles, lo que ayuda a detectar y corregir errores temprano en el proceso de desarrollo y a verificar que los cambios en el código no hayan introducido nuevos errores.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuración de JUnit en CodeLab" duration="1">
+        <p>Los IDE más comunes, como Eclipse e IntelliJ, ya tendrán instalada la integración de pruebas JUnit de manera predeterminada. Si no usa un IDE y tal vez depende únicamente de un sistema de compilación como Maven o Gradle, la instalación de JUnit 4/5 se maneja a través del archivo pom.xml o build.gradle, respectivamente.</p>
+<p>Es importante tener en cuenta que JUnit 5 se dividió en 3 módulos, uno de los cuales es un módulo antiguo que admite la anotación/sintaxis de JUnit 4 y 3. El uso de JUnit 3 es muy bajo en este punto y generalmente solo se ve en proyectos mucho más antiguos.</p>
+<p>En este caso vamos a enseñar a utilizarlo en Visual Studio Code:</p>
+<p class="image-container"><img style="width: 126.50px" src="img\\91be2b49811a0662.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Paso 1: Descargar Extension Test Runner" duration="2">
+        <p>Debes ir a la parte izquierda de Visual Studio, en el símbolo de  extensiones::</p>
+<p class="image-container"><img style="width: 53.00px" src="img\\6392bbddb4bd97ae.png"></p>
+<p>Luego vas al buscador y escribes  &#34;Test Runner&#34; y seleccionas esta extensión:</p>
+<p class="image-container"><img style="width: 252.00px" src="img\\826a52de83bd713c.png"></p>
+<p>Y solamente tienes que seleccionar la opción &#34;descargar&#34; </p>
+<p class="image-container"><img style="width: 601.70px" src="img\\5506bc955f14abea.png"></p>
+<aside class="special"><p><strong>Nota:</strong> Recuerda tener conexión a internet para realizar este proceso.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
